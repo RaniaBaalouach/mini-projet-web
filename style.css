@@ -79,7 +79,10 @@ nav {
     display: flex;
     align-items: center;
     gap: 25px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
+
 
 /* Underline animé */
 .nav-link {
