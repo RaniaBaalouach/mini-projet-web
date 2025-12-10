@@ -1,29 +1,29 @@
-/* ===========================================================
-   SMOOTH SCROLL FOR NAVIGATION LINKS
-   =========================================================== */
-document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+/* Smooth scroll */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: "smooth"
-            });
+        if (this.getAttribute("href").startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: "smooth"
+                });
+            }
         }
     });
 });
 
-/* ===========================================================
-   UPDATE FOOTER YEAR
-   =========================================================== */
+/* Update year */
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-/* ===========================================================
-   LOGIN / REGISTER SYSTEM
-   =========================================================== */
+/* Mobile menu toggle */
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+
+/* Login / Register System */
 function showRegister() {
     document.querySelector(".login-box").classList.add("hidden");
     document.querySelector(".register-box").classList.remove("hidden");
@@ -46,7 +46,7 @@ function register() {
     localStorage.setItem("rania_user", user);
     localStorage.setItem("rania_pass", pass);
 
-    alert("Compte créé avec succès !");
+    alert("Compte créé !");
     showLogin();
 }
 
@@ -61,6 +61,6 @@ function login() {
         alert("Connexion réussie !");
         window.location.href = "index.html";
     } else {
-        alert("Nom d'utilisateur ou mot de passe incorrect.");
+        alert("Identifiants incorrects.");
     }
 }

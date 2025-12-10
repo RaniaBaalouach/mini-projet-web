@@ -13,19 +13,25 @@
 <!-- NAVBAR -->
 <header class="navbar fade-in">
 
-    <!-- Logo gauche -->
+    <!-- Logo -->
     <a href="#home" class="logo">R.BAA</a>
 
-    <!-- Menu centré -->
-    <div class="nav-center">
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-center" id="navMenu">
         <a href="#home" class="nav-link">Accueil</a>
         <a href="#about" class="nav-link">À propos</a>
         <a href="#skills" class="nav-link">Compétences</a>
         <a href="#timeline" class="nav-link">Parcours</a>
         <a href="#projects" class="nav-link">Projets</a>
+
+        <!-- Login bouton dans menu mobile -->
+        <a href="login.html" class="btn-small mobile-login">Connexion</a>
     </div>
 
-    <!-- Bouton Connexion droite -->
+    <!-- Login bouton (desktop) -->
     <a href="login.html" class="btn-small nav-login-btn">Connexion</a>
 
 </header>
@@ -36,7 +42,8 @@
         <h1>Bonjour, je suis <span class="accent">Rania Baalouach</span></h1>
         <p class="subtitle">Étudiante ingénieure en Cybersécurité — ENSA Tétouan</p>
         <p class="intro">
-            Passionnée par la cybersécurité, l'analyse forensique, le cloud sécurisé et le développement de solutions fiables.
+            Passionnée par la cybersécurité, l'analyse forensique, le cloud sécurisé,
+            et le développement de solutions fiables.
         </p>
         <a href="#projects" class="btn">Voir mes projets</a>
     </div>
@@ -48,7 +55,7 @@
     <p class="section-desc">
         Je suis étudiante ingénieure à l’ENSA Tétouan en filière 
         <strong>Cybersécurité & Systèmes Embarqués</strong>.
-        J'aime comprendre comment fonctionnent les systèmes, comment les sécuriser
+        J'aime comprendre comment fonctionnent les systèmes, comment les sécuriser,
         et comment prévenir les cyberattaques.
     </p>
 </section>
@@ -61,27 +68,27 @@
 
         <div class="skill">
             <span>Analyse Forensique</span>
-            <div class="progress"><div style="width: 80%"></div></div>
+            <div class="progress"><div style="width: 80%;"></div></div>
         </div>
 
         <div class="skill">
             <span>Sécurité Cloud (Azure / AWS)</span>
-            <div class="progress"><div style="width: 75%"></div></div>
+            <div class="progress"><div style="width: 75%;"></div></div>
         </div>
 
         <div class="skill">
             <span>Développement Python</span>
-            <div class="progress"><div style="width: 85%"></div></div>
+            <div class="progress"><div style="width: 85%;"></div></div>
         </div>
 
         <div class="skill">
             <span>Cryptographie & Protocoles</span>
-            <div class="progress"><div style="width: 78%"></div></div>
+            <div class="progress"><div style="width: 78%;"></div></div>
         </div>
 
         <div class="skill">
             <span>Sécurité Réseau</span>
-            <div class="progress"><div style="width: 82%"></div></div>
+            <div class="progress"><div style="width: 82%;"></div></div>
         </div>
 
     </div>
@@ -135,25 +142,24 @@
     <div class="cards">
 
         <div class="card">
-            <h3>Analyse Forensique d’un Disque Compromis</h3>
+            <h3>Analyse Forensique</h3>
             <p>
-                Étude d'une attaque ransomware et extraction d'artefacts numériques
+                Analyse d’un disque compromis et extraction d’artefacts numériques
                 via Autopsy & Volatility.
             </p>
         </div>
 
         <div class="card">
-            <h3>Sécurisation d'une Infrastructure Cloud</h3>
+            <h3>Sécurisation Cloud AWS</h3>
             <p>
-                Mise en place d'une architecture sécurisée sur AWS
-                avec IAM, Security Groups et chiffrement.
+                Mise en place d’une architecture sécurisée et durcie sur AWS.
             </p>
         </div>
 
         <div class="card">
-            <h3>Système IoT de Détection d'Intrusion</h3>
+            <h3>Système IoT sécurisé</h3>
             <p>
-                Prototype utilisant ESP32 + capteurs + dashboard cloud sécurisé.
+                Détection d’intrusion à base d’ESP32 avec communication chiffrée.
             </p>
         </div>
 
