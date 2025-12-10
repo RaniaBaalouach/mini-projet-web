@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion | R.BAA</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body class="login-body">
+
+<!-- Logo haut + retour accueil -->
+<a href="index.html" class="login-logo fade-in">R.BAA</a>
+
+<div class="login-wrapper fade-in">
+
+    <!-- CONNEXION -->
+    <div class="login-box">
+        <h2>Connexion</h2>
+        <p class="login-sub">Bienvenue dans votre espace sécurisé</p>
+
+        <input type="text" id="login-username" placeholder="Nom d'utilisateur">
+        <input type="password" id="login-password" placeholder="Mot de passe">
+
+        <button class="btn full-width" onclick="login()">Se connecter</button>
+
+        <p class="switch-text" onclick="showRegister()">Créer un compte</p>
+    </div>
+
+    <!-- INSCRIPTION -->
+    <div class="register-box hidden">
+        <h2>Créer un compte</h2>
+        <p class="login-sub">Rejoignez la plateforme</p>
+
+        <input type="text" id="reg-username" placeholder="Nom d'utilisateur">
+        <input type="password" id="reg-password" placeholder="Mot de passe">
+
+        <button class="btn full-width" onclick="register()">Créer</button>
+
+        <p class="switch-text" onclick="showLogin()">Déjà inscrite ? Connexion</p>
+    </div>
+
+</div>
+
+</body>
+</html>
